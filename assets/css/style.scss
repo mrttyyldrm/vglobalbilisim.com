@@ -1,0 +1,266 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: #000;
+    overflow: hidden;
+}
+
+.container{
+    width: 120rem;
+    margin: 0 auto;
+}
+
+/*#region Main Codes*/
+
+main{
+
+    section#coming-soon{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #coming-soon-background{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+            background-image: url(../img/cooming-soon-img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom;
+            transition: transform 0.5s ease;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #coming-soon-title{
+
+                h1{
+                    font-size: 7rem;
+                    font-weight: 400;
+                    color: #FFF;
+                    letter-spacing: 0.14rem;
+                    margin-bottom: 4rem;
+                    text-align: center;
+                }
+            }
+
+            #coming-soon-timelapse{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .timelapse{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    padding: 0 2rem;
+                    width: 15%;
+
+                    span{
+                        font-size: 4.4rem;
+                        font-weight: 400;
+                        color: #FFF;
+                        margin-bottom: 1rem;
+                    }
+
+                    p{
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        color: #b6b6b6;   
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*#endregion*/
+
+
+/*#region Responsive Codes*/
+
+@media screen and (max-width: 1390px){
+    html{
+        font-size: 9.8px;
+    }
+}
+@media screen and (max-width: 1340px){
+    html{
+        font-size: 9.6px;
+    }
+}
+@media screen and (max-width: 1290px){
+    html{
+        font-size: 9.4px;
+    }
+}
+@media screen and (max-width: 1240px){
+    html{
+        font-size: 9.2px;
+    }
+}
+@media screen and (max-width: 1190px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 1140px){
+    html{
+        font-size: 8.8px;
+    }
+}
+@media screen and (max-width: 1090px){
+    html{
+        font-size: 8.6px;
+    }
+}
+@media screen and (max-width: 1024px){
+    html{
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 974px){
+    html{
+        font-size: 8.8px;
+    }
+}
+@media screen and (max-width: 924px){
+    html{
+        font-size: 8.6px;
+    }
+}
+@media screen and (max-width: 874px){
+    html{
+        font-size: 8.4px;
+    }
+}
+@media screen and (max-width: 824px){
+    html{
+        font-size: 8.2px;
+    }
+}
+@media screen and (max-width: 768px){
+    html{
+        font-size: 8px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    main{
+        section#coming-soon{
+            .container{
+                #coming-soon-timelapse{
+                    .timelapse{
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 718px){
+    html{
+        font-size: 7.8px;
+    }
+}
+@media screen and (max-width: 668px){
+    html{
+        font-size: 7.6px;
+    }
+}
+@media screen and (max-width: 618px){
+    html{
+        font-size: 7.4px;
+    }
+}
+@media screen and (max-width: 568px){
+    html{
+        font-size: 7.2px;
+    }
+}
+@media screen and (max-width: 518px){
+    html{
+        font-size: 7px;
+    }
+}
+@media screen and (max-width: 468px){
+    html{
+        font-size: 10px;
+    }
+    
+    main{
+        section#coming-soon{
+
+            #coming-soon-background{
+                height: 80vh;
+            }
+
+            .container{
+                #coming-soon-timelapse{
+                    flex-wrap: wrap;
+
+                    .timelapse{
+                        width: 35%;
+                        margin-bottom: 3rem;
+
+                        &:nth-child(3),&:nth-child(4){
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px){
+    html{
+        font-size: 9.75px;
+    }
+}
+@media screen and (max-width: 400px){
+    html{
+        font-size: 9.5px;
+    }
+}
+@media screen and (max-width: 375px){
+    html{
+        font-size: 9.25px;
+    }
+}
+@media screen and (max-width: 350px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 325px){
+    html{
+        font-size: 8.75px;
+    }
+}
+
+
+/*#endregion*/
