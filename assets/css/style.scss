@@ -31,10 +31,19 @@ header{
     position: fixed;
     top: 0; left: 0;
     z-index: 100;
-    transition: background-color 0.5s ease;
+    border-bottom: 0.2rem solid transparent;
+    transition-property: background-color,border-color;
+    transition: 0.5s ease;
 
     &.scroll{
         background-color: #000;
+        border-color: #212121;
+
+        .container{
+            #header-menu{
+
+            }
+        }
     }
 
     .container{
@@ -43,6 +52,7 @@ header{
         align-items: center;
 
         #header-logo{
+            flex-shrink: 0;
             
             img{
                 width: auto;
@@ -51,11 +61,19 @@ header{
         }
 
         #header-menu{
+            width: 100%;
+
             nav{
                 ul{
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
+
+                    &:hover{
+                        li{
+                            color: #b6b6b6;
+                        }
+                    }
 
                     li{
                         cursor: pointer;
@@ -66,6 +84,7 @@ header{
                         color: #fff;
                         display: flex;
                         align-items: center;
+                        transition: color 0.3s ease;
 
                         &:first-child{
                             margin-left: 0;
@@ -80,17 +99,28 @@ header{
                                 right: 0;
                                 width: 5rem;
                                 padding: 1rem 0;
-                                background-color: rgba(255,255,255,0.2);
+                                background-color: #000;
+                                border: 0.15rem solid #212121;
                                 border-radius: 0.5rem;
                                 display: none;
                                 
                                 li{
                                     width: 100%;
+                                    color: #b6b6b6;
                                     padding: 0;
                                     display: flex;
                                     justify-content: center;
+                                    transition: color 0.3s ease;
+
+                                    &:hover{
+                                        color: #fff;
+                                    }
                                 }
                             }
+                        }
+
+                        &:hover{
+                            color: #fff;
                         }
 
                         a{
@@ -326,8 +356,66 @@ main{
         }
     }
 
-    section#features{
+    section#explore{
         padding: 12rem 0;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #explore-content{
+                width: 35%;
+
+                #explore-title{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    span{
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        color: #b6b6b6;
+                        margin-bottom: 0.5rem;
+                    }
+    
+                    h2{
+                        font-size: 4.2rem;
+                        font-weight: 400;
+                        color: #fff;
+                        margin-bottom: 2rem;
+                    }
+    
+                    p{
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #b6b6b6;
+                        line-height: 1.75;
+                    }
+                }
+            }
+
+            #explore-image{
+                width: 65%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                img{
+                    width: calc(50% - 1.5rem);
+                    max-width: 32rem;
+                    border: 0.15rem solid #212121;
+                    
+                    &:last-child{
+                        margin-left: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    section#features{
+        padding: 12rem 0 6rem 0;
 
         .container{
 
@@ -435,8 +523,7 @@ main{
             }
         }
     }
-
-    
+ 
     section#contact{
         background: linear-gradient(0deg, rgba(0,0,0,1) -10%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 110%);
         padding: 12rem 0;
