@@ -12,11 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #000;
-  height: 3000px;
-}
-
 .container {
   width: 120rem;
   margin: 0 auto;
@@ -24,6 +19,7 @@ body {
 
 section {
   width: 100%;
+  background-color: #000;
   overflow-x: hidden;
 }
 
@@ -96,7 +92,20 @@ header .container #header-menu nav ul li i {
 
 /*#endregion*/
 /*#region Main Codes*/
+main #background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/presentation-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
 main section#home {
+  background-color: transparent;
   position: relative;
   height: 100vh;
   padding: 0;
@@ -229,13 +238,13 @@ main section#products .container #products-content #products-pagination span {
 main section#products .container #products-content #products-pagination span:hover, main section#products .container #products-content #products-pagination span.active {
   background-color: #fff;
 }
-main section#features .feature {
+main section#show .show {
   position: relative;
   width: 100%;
   height: 50rem;
   padding-top: 5rem;
 }
-main section#features .feature img {
+main section#show .show img {
   position: absolute;
   top: 0;
   left: 0;
@@ -249,26 +258,182 @@ main section#features .feature img {
   transition: object-position 0.4s ease-out, -o-object-position 0.4s ease-out;
   z-index: 0;
 }
-main section#features .feature .container {
+main section#show .show .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-main section#features .feature .container * {
+main section#show .show .container * {
   z-index: 1;
   width: 50%;
 }
-main section#features .feature .container h3 {
+main section#show .show .container h3 {
   font-size: 4.2rem;
   font-weight: 400;
   color: #fff;
   margin-bottom: 2rem;
 }
-main section#features .feature .container p {
+main section#show .show .container p {
   font-size: 1.6rem;
   font-weight: 400;
   color: #b6b6b6;
   line-height: 1.75;
+}
+main section#features {
+  padding: 12rem 0;
+}
+main section#features .container #features-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 6rem;
+}
+main section#features .container #features-title span {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  margin-bottom: 0.5rem;
+}
+main section#features .container #features-title h2 {
+  width: 100%;
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+main section#features .container #features-title p {
+  width: 60%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 1.75;
+}
+main section#features .container #features-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#features .container #features-content .feature {
+  position: relative;
+  width: calc(25% - 1.5rem);
+  border: 0.15rem solid #212121;
+  height: 40rem;
+  overflow: hidden;
+  display: flex;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+main section#features .container #features-content .feature:hover img {
+  transform: scale(1.05);
+}
+main section#features .container #features-content .feature:hover .feature-overlay {
+  opacity: 0.6;
+}
+main section#features .container #features-content .feature img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+main section#features .container #features-content .feature .feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%);
+  transition: opacity 0.75s ease;
+}
+main section#features .container #features-content .feature .feature-text {
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+main section#features .container #features-content .feature .feature-text h6 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #fff;
+}
+main section#features .container #features-content .feature .feature-text p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #b6b6b6;
+}
+main section#contact {
+  background: linear-gradient(0deg, rgb(0, 0, 0) -10%, rgba(255, 255, 255, 0) 50%, rgb(0, 0, 0) 110%);
+  padding: 12rem 0;
+}
+main section#contact .container #contact-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+main section#contact .container #contact-title h2 {
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+main section#contact .container #contact-title p {
+  width: 75%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 1.75;
+  margin-bottom: 4.5rem;
+}
+main section#contact .container #contact-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main section#contact .container #contact-content ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+main section#contact .container #contact-content ul li {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+main section#contact .container #contact-content ul li h6 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+main section#contact .container #contact-content ul li a p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  transition: color 0.3s ease;
+}
+main section#contact .container #contact-content ul li a:hover p {
+  color: #fff;
 }
 main section#coming-soon {
   height: 100vh;

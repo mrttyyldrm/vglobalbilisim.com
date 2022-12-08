@@ -2,7 +2,7 @@ $(window).scroll(function () {
 
     var start = $(this).scrollTop() + $(window).height();
 
-    $("section#features .feature").each(function () {
+    $("section#show .show").each(function () {
         var OffsetTop = $(this).offset().top;
         var ratioElement = parseInt(50 + (start - OffsetTop) * 0.02);
 

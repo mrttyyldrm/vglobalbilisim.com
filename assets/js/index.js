@@ -4,5 +4,7 @@ $(document).ready(function(){
     $("header").load("header.html");
     $("section#home").load("home.html")
     $("section#products").load("products.html");
+    $("section#show").load("show.html");
+    $("section#contact").load("contact.html");
     $("section#features").load("features.html");
 });
