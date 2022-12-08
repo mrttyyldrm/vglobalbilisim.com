@@ -1,17 +1,13 @@
-$(window).scroll(function(){
+$(window).scroll(function () {
+
     var start = $(this).scrollTop() + $(window).height();
 
-    var first = $("#features .feature:nth-child(1)").offset().top
-    var second = $("#features .feature:nth-child(2)").offset().top
-    var third = $("#features .feature:nth-child(3)").offset().top
+    $("section#features .feature").each(function () {
+        var OffsetTop = $(this).offset().top;
+        var ratioElement = parseInt(50 + (start - OffsetTop) * 0.02);
 
-    var ratioFirst = parseInt(50 + (start - first) * 0.02);
-    console.log(ratioFirst);
-    $("section#features .feature:nth-child(1) img").css("object-position","center " + ratioFirst.toString() + "%");
-
-    var ratioSecond = parseInt(50 + (start - second) * 0.02);
-    $("section#features .feature:nth-child(2) img").css("object-position","center " + ratioSecond.toString() + "%");
-
-    var ratioThird = parseInt(50 + (start - second) * 0.02);
-    $("section#features .feature:nth-child(3) img").css("object-position","center " + ratioThird.toString() + "%");
+        if (ratioElement >= 0 && ratioElement <= 100) {
+            $(this).children("img").css("object-position", "center " + ratioElement.toString() + "%");
+        }
+    });
 });
