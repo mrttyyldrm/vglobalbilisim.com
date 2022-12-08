@@ -14,6 +14,7 @@ html{
 
 body{
     background-color: #000;
+    height: 3000px;
 }
 
 .container{
@@ -30,10 +31,15 @@ section{
 
 header{
     width: 100%;
-    padding: 1rem 0;
+    height: 7rem;
     position: fixed;
     top: 0; left: 0;
     z-index: 100;
+    transition: background-color 0.5s ease;
+
+    &.scroll{
+        background-color: #000;
+    }
 
     .container{
         display: flex;
@@ -115,6 +121,7 @@ main{
     section#home{
         position: relative;
         height: 100vh;
+        padding: 0;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
@@ -134,9 +141,6 @@ main{
 
         .container{
             padding-bottom: 7.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
             
             #home-content{
                 display: flex;
@@ -153,17 +157,24 @@ main{
                 }
 
                 a{
-                    background-color: #fff;
+                    background-color: transparent;
                     border-radius: 3rem;
-                    border: none;
+                    border: 0.3rem solid #fff;
                     outline: none;
                     padding: 1.6rem 3.25rem;
                     font-size: 1.5rem;
                     font-weight: 500;
-                    color: #000;
+                    color: #fff;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    transition-property: background-color,color;
+                    transition: 0.3s ease;
+
+                    &:hover{
+                        background-color: #fff;
+                        color: #000;
+                    }
 
                     i{
                         font-size: 1.8rem;
@@ -172,42 +183,88 @@ main{
                     }
                 }
             }
+        }
+    }
 
-            #home-buttons{
+    section#products{
+        padding: 12rem 0;
+
+        .container{
+            #products-title{
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 6rem;
+
+                h2{
+                    width: calc(95% - 35rem);
+                    font-size: 4.2rem;
+                    font-weight: 400;
+                    color: #fff;
+                    line-height: 4.8rem;
+                }
+
+                p{
+                    width: calc(35rem + 5%);
+                    padding: 1.5rem 0 1.5rem 5%;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: #b6b6b6;
+                    border-left: 0.1rem solid rgba(255,255,255,0.2);
+                }
+            }
+
+            #products-content{
+                width: 100%;
+                height: 40rem;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
                 align-items: center;
 
-                button{
-                    cursor: pointer;
+                #products-slider{
+                    width: 166.66%;
+                    position: absolute;
+                    top: 0;
+                    left: -33%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    transition: left 0.75s ease;
+
+                    .product{
+                        width: 33.33%;
+                        display: flex;
+                        justify-content: center;
+
+                        img{
+                            width: 100%;
+                            max-width: 30rem;
+                        }
+                    }
+                }
+
+                #products-pagination{
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 1.6rem;
-                    border-radius: 2.4rem 0 0 2.4rem;
-                    background-color: #fff;
-                    border: none;
-                    margin: 0 0.15rem;
-
-                    &:last-child{
-                        border-radius: 0 2.4rem 2.4rem 0;
-
-                        i{
-                            margin-left: 0.5rem;
-                            margin-right: 0;
-                        }
-                    }
-
-                    i{
-                        font-size: 1.75rem;
-                        color: #000;
-                        margin-right: 0.5rem;
-                    }
 
                     span{
-                        font-size: 1.5rem;
-                        font-weight: 500;
-                        color: #000;
+                        cursor: pointer;
+                        margin: 0 0.75rem;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        border-radius: 50%;
+                        border: 0.125rem solid #fff;
+                        transition: background-color 0.3s ease;
+
+                        &:hover,&.active{
+                            background-color: #fff;
+                        }
                     }
                 }
             }
@@ -216,6 +273,48 @@ main{
 
     section#features{
 
+        .feature{
+            position: relative;
+            width: 100%;
+            height: 50rem;
+            padding-top: 5rem;
+
+            img{
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: object-position 0.4s ease-out;
+                z-index: 0;
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                *{
+                    z-index: 1;
+                    width: 50%;
+                }
+
+                h3{
+                    font-size: 4.2rem;
+                    font-weight: 400;
+                    color: #fff;
+                    margin-bottom: 2rem;
+                }
+
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: #b6b6b6;
+                    line-height: 1.75;
+                }
+            }
+        }
     }
 
     section#coming-soon{
