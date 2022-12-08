@@ -7,4 +7,5 @@ $(document).ready(function(){
     $("section#show").load("show.html");
     $("section#contact").load("contact.html");
     $("section#features").load("features.html");
+    $("footer").load("footer.html");
 });
