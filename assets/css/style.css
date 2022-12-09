@@ -8,8 +8,18 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 11.2px;
   scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 1.2rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: #000;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #212121;
 }
 
 .container {
@@ -26,7 +36,7 @@ section {
 /*#region Header Codes*/
 header {
   width: 100%;
-  height: 7rem;
+  padding: 2rem 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -51,6 +61,13 @@ header .container #header-logo img {
   width: auto;
   height: 3rem;
 }
+header .container #header-mobile {
+  display: none;
+}
+header .container #header-mobile i {
+  font-size: 2.5rem;
+  color: #fff;
+}
 header .container #header-menu {
   width: 100%;
 }
@@ -65,7 +82,6 @@ header .container #header-menu nav ul:hover li {
 header .container #header-menu nav ul li {
   cursor: pointer;
   margin-left: 3rem;
-  padding: 2.5rem 0;
   font-size: 1.7rem;
   font-weight: 400;
   color: #fff;
@@ -81,7 +97,7 @@ header .container #header-menu nav ul li:last-child {
 }
 header .container #header-menu nav ul li:last-child ol {
   position: absolute;
-  top: 6rem;
+  top: 3rem;
   right: 0;
   width: 5rem;
   padding: 1rem 0;
@@ -114,18 +130,6 @@ header .container #header-menu nav ul li i {
 
 /*#endregion*/
 /*#region Main Codes*/
-main #background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/presentation-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-}
 main section#home {
   background-color: transparent;
   position: relative;
@@ -199,6 +203,7 @@ main section#products .container #products-title {
 }
 main section#products .container #products-title h2 {
   width: calc(95% - 35rem);
+  padding-right: 5%;
   font-size: 4.2rem;
   font-weight: 400;
   color: #fff;
@@ -227,7 +232,7 @@ main section#products .container #products-content #products-slider {
   width: 166.66%;
   position: absolute;
   top: 0;
-  left: -33%;
+  left: 0%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -241,6 +246,9 @@ main section#products .container #products-content #products-slider .product {
 main section#products .container #products-content #products-slider .product img {
   width: 100%;
   max-width: 30rem;
+}
+main section#products .container #products-content #products-pagination span.fourth {
+  display: none;
 }
 main section#products .container #products-content #products-pagination {
   width: 100%;
@@ -436,6 +444,7 @@ main section#features .container #features-content .feature .feature-text h6 {
   font-size: 2.4rem;
   font-weight: 400;
   color: #fff;
+  line-height: 1.75;
 }
 main section#features .container #features-content .feature .feature-text p {
   font-size: 1.4rem;
@@ -593,41 +602,29 @@ footer .container #footer-business p {
   line-height: 1.75;
   color: #fff;
 }
-footer .container #footer-business p span {
-  font-weight: 300;
-  color: #b6b6b6;
-}
-footer .container #footer-business p span a {
-  color: #b6b6b6;
-  transition: color 0.3s ease;
-}
-footer .container #footer-business p span a:hover {
-  color: #fff;
-  font-weight: 500;
-}
-footer .container #footer-address h6, footer .container #footer-about h6, footer .container #footer-social h6 {
+footer .container #footer-address h6, footer .container #footer-overview h6, footer .container #footer-social h6 {
   font-size: 2.2rem;
   font-weight: 400;
   color: #fff;
   margin-bottom: 2rem;
 }
-footer .container #footer-address ul, footer .container #footer-about ul, footer .container #footer-social ul {
+footer .container #footer-address ul, footer .container #footer-overview ul, footer .container #footer-social ul {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-footer .container #footer-address ul li, footer .container #footer-about ul li, footer .container #footer-social ul li {
+footer .container #footer-address ul li, footer .container #footer-overview ul li, footer .container #footer-social ul li {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-footer .container #footer-address ul li:hover, footer .container #footer-about ul li:hover, footer .container #footer-social ul li:hover {
+footer .container #footer-address ul li:hover, footer .container #footer-overview ul li:hover, footer .container #footer-social ul li:hover {
   transform: translateX(1rem);
 }
-footer .container #footer-address ul li:hover a, footer .container #footer-about ul li:hover a, footer .container #footer-social ul li:hover a {
+footer .container #footer-address ul li:hover a, footer .container #footer-overview ul li:hover a, footer .container #footer-social ul li:hover a {
   color: #fff;
 }
-footer .container #footer-address ul li a, footer .container #footer-about ul li a, footer .container #footer-social ul li a {
+footer .container #footer-address ul li a, footer .container #footer-overview ul li a, footer .container #footer-social ul li a {
   font-size: 1.6rem;
   font-weight: 400;
   color: #b6b6b6;
@@ -637,44 +634,113 @@ footer .container #footer-address ul li a, footer .container #footer-about ul li
 
 /*#endregion*/
 /*#region Responsive Codes*/
+@media screen and (max-width: 1690px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1640px) {
+  html {
+    font-size: 10.8px;
+  }
+}
+@media screen and (max-width: 1590px) {
+  html {
+    font-size: 10.6px;
+  }
+}
+@media screen and (max-width: 1540px) {
+  html {
+    font-size: 10.4px;
+  }
+}
+@media screen and (max-width: 1490px) {
+  html {
+    font-size: 10.2px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 1390px) {
   html {
-    font-size: 9.8px;
+    font-size: 9.75px;
   }
 }
 @media screen and (max-width: 1340px) {
   html {
-    font-size: 9.6px;
+    font-size: 9.5px;
   }
 }
 @media screen and (max-width: 1290px) {
   html {
-    font-size: 9.4px;
+    font-size: 9.25px;
   }
 }
 @media screen and (max-width: 1240px) {
   html {
-    font-size: 9.2px;
+    font-size: 9px;
   }
 }
 @media screen and (max-width: 1190px) {
   html {
-    font-size: 9px;
+    font-size: 8.75px;
   }
 }
 @media screen and (max-width: 1140px) {
   html {
-    font-size: 8.8px;
+    font-size: 8.5px;
+  }
+  .container {
+    width: 90%;
   }
 }
 @media screen and (max-width: 1090px) {
   html {
-    font-size: 8.6px;
+    font-size: 8.25px;
   }
 }
 @media screen and (max-width: 1024px) {
   html {
     font-size: 9px;
+  }
+  main section#features .container #features-title p {
+    width: 75%;
+  }
+  main section#features .container #features-content {
+    flex-wrap: wrap;
+  }
+  main section#features .container #features-content .feature {
+    width: calc(50% - 1.5rem);
+  }
+  main section#features .container #features-content .feature:first-child, main section#features .container #features-content .feature:nth-child(2) {
+    margin-bottom: 3rem;
+  }
+  main section#explore {
+    padding-bottom: 0;
+  }
+  main section#explore .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main section#explore .container #explore-content {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  main section#explore .container #explore-image {
+    width: 100%;
+    justify-content: space-between;
+  }
+  main section#explore .container #explore-image img {
+    width: calc(50% - 1.5rem);
+    max-width: initial;
+    margin-bottom: 4rem;
+  }
+  main section#explore .container #explore-image img:last-child {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 974px) {
@@ -704,8 +770,45 @@ footer .container #footer-address ul li a, footer .container #footer-about ul li
   .container {
     width: 90%;
   }
+  main section#products .container #products-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main section#products .container #products-title h2 {
+    width: 75%;
+  }
+  main section#products .container #products-title p {
+    width: 75%;
+    padding-left: 0;
+    border: none;
+  }
+  main section#show .show .container * {
+    width: 75%;
+  }
   main section#coming-soon .container #coming-soon-timelapse .timelapse {
     width: 20%;
+  }
+  footer {
+    padding: 6rem 0;
+  }
+  footer .container {
+    flex-wrap: wrap;
+  }
+  footer .container div {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container #footer-business {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  footer .container #footer-address ul, footer .container #footer-overview ul, footer .container #footer-social ul {
+    align-items: center;
   }
 }
 @media screen and (max-width: 718px) {
@@ -737,6 +840,92 @@ footer .container #footer-address ul li a, footer .container #footer-about ul li
   html {
     font-size: 10px;
   }
+  header {
+    display: flex;
+    align-items: center;
+  }
+  header .container {
+    flex-wrap: wrap;
+  }
+  header .container #header-mobile {
+    display: block;
+  }
+  header .container #header-menu {
+    width: 100%;
+    display: none;
+    margin-top: 1.5rem;
+  }
+  header .container #header-menu nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  header .container #header-menu nav ul li {
+    padding: 1rem 0;
+  }
+  header .container #header-menu nav ul li:last-child i {
+    transform: rotate(90deg);
+  }
+  header .container #header-menu nav ul li:last-child ol {
+    top: 0;
+    left: -6rem;
+  }
+  main section#home .container #home-content h1 {
+    line-height: normal;
+    font-size: 4.2rem;
+  }
+  main section#products .container #products-title h2, main section#products .container #products-title p {
+    width: 100%;
+  }
+  main section#products .container #products-content {
+    height: 30rem;
+  }
+  main section#products .container #products-content #products-slider {
+    width: 250%;
+  }
+  main section#products .container #products-content #products-slider .product {
+    width: 50%;
+  }
+  main section#products .container #products-content #products-pagination span.fourth {
+    display: inline-block;
+  }
+  main section#show .show .container * {
+    width: 100%;
+  }
+  main section#show .show .container h3 {
+    font-size: 3rem;
+  }
+  main section#explore {
+    padding-bottom: 0;
+  }
+  main section#explore .container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main section#explore .container #explore-content {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  main section#explore .container #explore-image {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main section#explore .container #explore-image img {
+    width: 100%;
+    max-width: initial;
+    margin-bottom: 4rem;
+  }
+  main section#explore .container #explore-image img:last-child {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  main section#features .container #features-title p {
+    width: 100%;
+  }
+  main section#features .container #features-content .feature {
+    width: 100%;
+  }
   main section#coming-soon #coming-soon-background {
     height: 80vh;
   }
@@ -748,6 +937,19 @@ footer .container #footer-address ul li a, footer .container #footer-about ul li
     margin-bottom: 3rem;
   }
   main section#coming-soon .container #coming-soon-timelapse .timelapse:nth-child(3), main section#coming-soon .container #coming-soon-timelapse .timelapse:nth-child(4) {
+    margin-bottom: 0;
+  }
+  footer .container {
+    flex-wrap: wrap;
+  }
+  footer .container div {
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container div:last-child {
     margin-bottom: 0;
   }
 }

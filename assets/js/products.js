@@ -7,10 +7,23 @@ $("#products-pagination span").click(function(){
             $("#products-slider").css("left","0");
         }
         else if($(this).hasClass("second")){
-            $("#products-slider").css("left","-33%");
+            if($(window).width() <= 440){
+                $("#products-slider").css("left","-50%");
+            }
+            else{
+                $("#products-slider").css("left","-33.33%");
+            }
         }
         else if($(this).hasClass("third")){
-            $("#products-slider").css("left","-66%");
+            if($(window).width() <= 440){
+                $("#products-slider").css("left","-100%");
+            }
+            else{
+                $("#products-slider").css("left","-66.66%");
+            }
+        }
+        else if($(this).hasClass("fourth")){
+            $("#products-slider").css("left","-150%");
         }
     }   
 });

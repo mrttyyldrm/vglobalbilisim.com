@@ -8,8 +8,21 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 11.2px;
     scroll-behavior: smooth;
+}
+
+body{
+
+    &::-webkit-scrollbar {
+        width: 1.2rem;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: #000;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #212121;
+    }
 }
 
 .container{
@@ -27,7 +40,7 @@ section{
 
 header{
     width: 100%;
-    height: 7rem;
+    padding: 2rem 0;
     position: fixed;
     top: 0; left: 0;
     z-index: 100;
@@ -38,12 +51,6 @@ header{
     &.scroll{
         background-color: #000;
         border-color: #212121;
-
-        .container{
-            #header-menu{
-
-            }
-        }
     }
 
     .container{
@@ -57,6 +64,15 @@ header{
             img{
                 width: auto;
                 height: 3rem;
+            }
+        }
+
+        #header-mobile{
+            display: none;
+            
+            i{
+                font-size: 2.5rem;
+                color: #fff;
             }
         }
 
@@ -78,7 +94,6 @@ header{
                     li{
                         cursor: pointer;
                         margin-left: 3rem;
-                        padding: 2.5rem 0;
                         font-size: 1.7rem;
                         font-weight: 400;
                         color: #fff;
@@ -95,7 +110,7 @@ header{
 
                             ol{
                                 position: absolute;
-                                top: 6rem;
+                                top: 3rem;
                                 right: 0;
                                 width: 5rem;
                                 padding: 1rem 0;
@@ -143,19 +158,7 @@ header{
 /*#region Main Codes*/
 
 main{
-
-    #background{
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/presentation-bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
-    }
-
+    
     section#home{
         background-color: transparent;
         position: relative;
@@ -237,6 +240,7 @@ main{
 
                 h2{
                     width: calc(95% - 35rem);
+                    padding-right: 5%;
                     font-size: 4.2rem;
                     font-weight: 400;
                     color: #fff;
@@ -268,7 +272,7 @@ main{
                     width: 166.66%;
                     position: absolute;
                     top: 0;
-                    left: -33%;
+                    left: 0%;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
@@ -283,6 +287,12 @@ main{
                             width: 100%;
                             max-width: 30rem;
                         }
+                    }
+                }
+
+                #products-pagination{
+                    span.fourth{
+                        display: none;
                     }
                 }
 
@@ -511,6 +521,7 @@ main{
                             font-size: 2.4rem;
                             font-weight: 400;
                             color: #fff;
+                            line-height: 1.75;
                         }
 
                         p{
@@ -705,25 +716,10 @@ footer{
                 letter-spacing: 0.05rem;
                 line-height: 1.75;
                 color: #fff;
-
-                span{
-                    font-weight: 300;
-                    color: #b6b6b6;
-
-                    a{
-                        color: #b6b6b6;
-                        transition: color 0.3s ease;
-
-                        &:hover{
-                            color: #fff;
-                            font-weight: 500;
-                        }
-                    }
-                }
             }
         }
 
-        #footer-address,#footer-about,#footer-social{
+        #footer-address,#footer-overview,#footer-social{
             h6{
                 font-size: 2.2rem;
                 font-weight: 400;
@@ -765,45 +761,131 @@ footer{
 /*#endregion*/
 
 /*#region Responsive Codes*/
-
+@media screen and (max-width: 1690px){
+    html{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 1640px){
+    html{
+        font-size: 10.8px;
+    }
+}
+@media screen and (max-width: 1590px){
+    html{
+        font-size: 10.6px;
+    }
+}
+@media screen and (max-width: 1540px){
+    html{
+        font-size: 10.4px;
+    }
+}
+@media screen and (max-width: 1490px){
+    html{
+        font-size: 10.2px;
+    }
+}
+@media screen and (max-width: 1440px){
+    html{
+        font-size: 10px;
+    }
+}
 @media screen and (max-width: 1390px){
     html{
-        font-size: 9.8px;
+        font-size: 9.75px;
     }
 }
 @media screen and (max-width: 1340px){
     html{
-        font-size: 9.6px;
+        font-size: 9.5px;
     }
 }
 @media screen and (max-width: 1290px){
     html{
-        font-size: 9.4px;
+        font-size: 9.25px;
     }
 }
 @media screen and (max-width: 1240px){
     html{
-        font-size: 9.2px;
+        font-size: 9px;
     }
 }
 @media screen and (max-width: 1190px){
     html{
-        font-size: 9px;
+        font-size: 8.75px;
     }
 }
 @media screen and (max-width: 1140px){
     html{
-        font-size: 8.8px;
+        font-size: 8.5px;
+    }
+
+    .container{
+        width: 90%;
     }
 }
 @media screen and (max-width: 1090px){
     html{
-        font-size: 8.6px;
+        font-size: 8.25px;
     }
 }
 @media screen and (max-width: 1024px){
     html{
         font-size: 9px;
+    }
+
+    main{
+        section#features{
+            .container{
+                #features-title{
+                    p{
+                        width: 75%;
+                    }   
+                }
+
+                #features-content{
+                    flex-wrap: wrap;
+
+                    .feature{
+                        width: calc(50% - 1.5rem);
+
+                        &:first-child,&:nth-child(2){
+                            margin-bottom: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+        section#explore{
+            padding-bottom: 0;
+
+            .container{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                #explore-content{
+                    width: 100%;
+                    margin-bottom: 4rem;
+                }
+
+                #explore-image{
+                    width: 100%;
+                    justify-content: space-between;
+
+                    img{
+                        width: calc(50% - 1.5rem);
+                        max-width: initial;
+                        margin-bottom: 4rem;
+                        
+                        &:last-child{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -837,12 +919,71 @@ footer{
     }
 
     main{
+
+        section#products{
+            .container{
+                #products-title{
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    h2{
+                        width: 75%;
+                    }
+
+                    p{
+                        width: 75%;
+                        padding-left: 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        section#show{
+            .show{
+                .container{
+                    *{
+                        width: 75%;
+                    }
+                }
+            }
+        }
+
         section#coming-soon{
             .container{
                 #coming-soon-timelapse{
                     .timelapse{
                         width: 20%;
                     }
+                }
+            }
+        }
+    }
+
+    footer{
+        padding: 6rem 0;
+
+        .container{
+            flex-wrap: wrap;
+
+            div{
+                width: 33.33%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #footer-business{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 5rem;
+            }
+
+            #footer-address,#footer-overview,#footer-social{
+                ul{
+                    align-items: center;
                 }
             }
         }
@@ -877,8 +1018,153 @@ footer{
     html{
         font-size: 10px;
     }
+
+    header{
+        display: flex;
+        align-items: center;
+
+        .container{
+            flex-wrap: wrap;
+
+            #header-mobile{
+                display: block;
+            }
+
+            #header-menu{
+                width: 100%;
+                display: none;
+                margin-top: 1.5rem;
+
+                nav{
+                    ul{
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-end;
+
+                        li{
+                            padding: 1rem 0;
+
+                            &:last-child{
+
+                                i{
+                                    transform: rotate(90deg);
+                                }
+
+                                ol{
+                                    top: 0;
+                                    left: -6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     main{
+
+        section#home{
+            .container{
+                #home-content{
+                    h1{
+                        line-height: normal;
+                        font-size: 4.2rem;
+                    }
+                }
+            }
+        }
+
+        section#products{
+            .container{
+                #products-title{
+                    h2,p{
+                        width: 100%;
+                    }
+                }
+
+                #products-content{
+                    height: 30rem;
+
+                    #products-slider{
+                        width: 250%;
+
+                        .product{
+                            width: 50%;
+                        }
+                    }
+
+                    #products-pagination{
+                        span.fourth{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+
+        section#show{
+            .show{
+                .container{
+                    *{
+                        width: 100%;
+                    }
+
+                    h3{
+                        font-size: 3rem;
+
+                    }
+                }
+            }
+        }
+
+        section#explore{
+            padding-bottom: 0;
+
+            .container{
+                flex-direction: column;
+                justify-content: flex-start;
+
+                #explore-content{
+                    width: 100%;
+                    margin-bottom: 4rem;
+                }
+
+                #explore-image{
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: flex-start;
+
+                    img{
+                        width: 100%;
+                        max-width: initial;
+                        margin-bottom: 4rem;
+                        
+                        &:last-child{
+                            margin-left: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        section#features{
+            .container{
+                #features-title{
+                    p{
+                        width: 100%;
+                    }   
+                }
+
+                #features-content{
+                    .feature{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
         section#coming-soon{
 
             #coming-soon-background{
@@ -897,6 +1183,24 @@ footer{
                             margin-bottom: 0;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    footer{
+        .container{
+            flex-wrap: wrap;
+
+            div{
+                width: 100%;
+                margin-bottom: 4rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                &:last-child{
+                    margin-bottom: 0;
                 }
             }
         }
