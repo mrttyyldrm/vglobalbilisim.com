@@ -6,7 +6,6 @@ $(document).ready(function(){
     $("section#products").load("products.html");
     $("section#show").load("show.html");
     $("section#explore").load("explore.html");
-    $("section#contact").load("contact.html");
     $("section#features").load("features.html");
     $("footer").load("footer.html");
 });
