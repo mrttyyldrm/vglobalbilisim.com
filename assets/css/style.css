@@ -92,6 +92,9 @@ header .container #header-menu nav ul li {
   align-items: center;
   transition: color 0.3s ease;
 }
+header .container #header-menu nav ul li a {
+  color: inherit;
+}
 header .container #header-menu nav ul li:first-child {
   margin-left: 0;
 }
@@ -130,6 +133,9 @@ header .container #header-menu nav ul li i {
 
 /*#endregion*/
 /*#region Main Codes*/
+main {
+  min-height: 50vh;
+}
 main section#home {
   background-color: transparent;
   position: relative;
@@ -358,7 +364,7 @@ main section#explore .container #explore-image img:last-child {
   margin-left: 3rem;
 }
 main section#features {
-  padding: 12rem 0 6rem 0;
+  padding: 12rem 0;
 }
 main section#features .container #features-title {
   display: flex;
@@ -478,7 +484,7 @@ main section#contact .container #contact-title {
   margin: 0 auto;
   padding-bottom: 2rem;
 }
-main section#contact .container #contact-title h2 {
+main section#contact .container #contact-title h1 {
   font-size: 4.2rem;
   font-weight: 400;
   color: #fff;
@@ -630,6 +636,75 @@ main section#contact .container #contact-instagram #instagram-content .post img 
      object-position: center;
   z-index: 0;
 }
+main section#about {
+  padding-top: 7.6rem;
+}
+main section#about #about-title {
+  width: 100%;
+  height: 40rem;
+  background-image: url(../img/about-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.2rem solid #212121;
+}
+main section#about #about-title .container {
+  display: flex;
+  justify-content: center;
+}
+main section#about #about-title .container h1 {
+  font-size: 16rem;
+  font-weight: 400;
+  color: #fff;
+}
+main section#about #about-content {
+  padding: 12rem 0;
+}
+main section#about #about-content .container .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+main section#about #about-content .container .about-text:first-child {
+  margin-bottom: 12rem;
+}
+main section#about #about-content .container .about-text h2 {
+  max-width: 50rem;
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 4.8rem;
+  margin-bottom: 1.5rem;
+}
+main section#about #about-content .container .about-text p {
+  max-width: 70rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 1.75;
+}
+main section#about #about-slide {
+  position: relative;
+  width: 200%;
+  height: 14.5rem;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 12rem;
+  overflow: hidden;
+}
+main section#about #about-slide span {
+  position: absolute;
+  padding: 0 2.5%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 10rem;
+  font-weight: 400;
+  color: #000;
+}
 main section#coming-soon {
   height: 100vh;
   display: flex;
@@ -694,6 +769,7 @@ footer {
   width: 100%;
   background-color: #000;
   padding: 12rem 0;
+  border-top: 0.2rem solid #212121;
 }
 footer .container {
   display: flex;
@@ -1068,6 +1144,9 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   main section#contact .container #contact-instagram #instagram-content .post {
     width: calc(50% - 0.5rem);
     margin-bottom: 1rem;
+  }
+  main section#about #about-title .container h1 {
+    font-size: 6rem;
   }
   main section#coming-soon #coming-soon-background {
     height: 80vh;

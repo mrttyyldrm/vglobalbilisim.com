@@ -102,6 +102,10 @@ header{
                         align-items: center;
                         transition: color 0.3s ease;
 
+                        a{
+                            color: inherit;
+                        }
+
                         &:first-child{
                             margin-left: 0;
                         }
@@ -155,6 +159,7 @@ header{
 /*#region Main Codes*/
 
 main{
+    min-height: 50vh;
     
     section#home{
         background-color: transparent;
@@ -422,7 +427,7 @@ main{
     }
 
     section#features{
-        padding: 12rem 0 6rem 0;
+        padding: 12rem 0;
 
         .container{
 
@@ -560,7 +565,7 @@ main{
                 margin: 0 auto;
                 padding-bottom: 2rem;
 
-                h2{
+                h1{
                     font-size: 4.2rem;
                     font-weight: 400;
                     color: #fff;
@@ -744,6 +749,90 @@ main{
         }
     }
 
+    section#about{
+        padding-top: 7.6rem;
+
+        #about-title{
+            width: 100%;
+            height: 40rem;
+            background-image: url(../img/about-bg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            border-bottom: 0.2rem solid #212121;
+
+            .container{
+                display: flex;
+                justify-content: center;
+
+                h1{
+                    font-size: 16rem;
+                    font-weight: 400;
+                    color: #fff;
+                }
+            }
+        }
+
+        #about-content{
+            padding: 12rem 0;
+
+            .container{
+
+                .about-text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    text-align: center;
+                    
+                    &:first-child{
+                        margin-bottom: 12rem;
+                    }
+
+                    h2{
+                        max-width: 50rem;
+                        font-size: 4.2rem;
+                        font-weight: 400;
+                        color: #fff;
+                        line-height: 4.8rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    p{
+                        max-width: 70rem;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #b6b6b6;
+                        line-height: 1.75;
+                    }
+                }
+            }
+        }
+
+        #about-slide{
+            position: relative;
+            width: 200%;
+            height: 14.5rem;
+            background-color: rgba(255,255,255,1);
+            margin-bottom: 12rem;
+            overflow: hidden;
+
+            span{
+                position: absolute;
+                padding: 0 2.5%;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-size: 10rem;
+                font-weight: 400;
+                color: #000;
+
+            }
+        }
+    }
+
     section#coming-soon{
         height: 100vh;
         display: flex;
@@ -821,6 +910,7 @@ footer{
     width: 100%;
     background-color: #000;
     padding: 12rem 0;
+    border-top: 0.2rem solid #212121;
 
     .container{
         display: flex;
@@ -1330,6 +1420,16 @@ footer{
                             width: calc(50% - 0.5rem);
                             margin-bottom: 1rem;
                         }
+                    }
+                }
+            }
+        }
+
+        section#about{
+            #about-title{
+                .container{
+                    h1{
+                        font-size: 6rem;
                     }
                 }
             }
