@@ -662,15 +662,41 @@ main section#about #about-title .container h1 {
 main section#about #about-content {
   padding: 12rem 0;
 }
+main section#about #about-content .container #about-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding-bottom: 6rem;
+}
+main section#about #about-content .container #about-features .about-feature {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main section#about #about-content .container #about-features .about-feature svg {
+  margin-bottom: 2rem;
+}
+main section#about #about-content .container #about-features .about-feature h3 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.75;
+}
+main section#about #about-content .container #about-features .about-feature p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 1.75;
+}
 main section#about #about-content .container .about-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-}
-main section#about #about-content .container .about-text:first-child {
-  margin-bottom: 12rem;
+  padding: 6rem 0;
 }
 main section#about #about-content .container .about-text h2 {
   max-width: 50rem;
@@ -696,6 +722,8 @@ main section#about #about-slide {
   overflow: hidden;
 }
 main section#about #about-slide span {
+  display: inline-block;
+  width: 400%;
   position: absolute;
   padding: 0 2.5%;
   top: 50%;
@@ -976,6 +1004,18 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   }
   main section#show .show .container * {
     width: 75%;
+  }
+  main section#about #about-content .container #about-features {
+    flex-direction: column;
+  }
+  main section#about #about-content .container #about-features .about-feature {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+  main section#about #about-content .container #about-features .about-feature p {
+    max-width: 40rem;
   }
   main section#coming-soon .container #coming-soon-timelapse .timelapse {
     width: 20%;
