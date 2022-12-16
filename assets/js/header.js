@@ -9,7 +9,6 @@ $(window).scroll(function(){
     $("#header-language ol").fadeOut();
     if($(window).width() <= 440){
       $("#header-menu").slideUp(750);
-      $("header").removeClass("scroll");
     }
 
     if($("body").hasClass("index")){
