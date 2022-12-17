@@ -733,40 +733,43 @@ main section#about #about-slide span {
   font-weight: 400;
   color: #000;
 }
-main section#products {
-  padding: 7.6rem 0 12rem 0;
-}
-main section#products #products-title {
+main #main-breadcrumb {
   width: 100%;
   height: 10rem;
   display: flex;
   align-items: center;
   border-bottom: 0.15rem solid #212121;
 }
-main section#products #products-title .container ul {
+main #main-breadcrumb .container {
+  padding-top: 0 !important;
+}
+main #main-breadcrumb .container ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-main section#products #products-title .container ul li {
+main #main-breadcrumb .container ul li {
   font-size: 1.25rem;
   font-weight: 500;
   color: #b6b6b6;
   text-transform: uppercase;
 }
-main section#products #products-title .container ul li:hover, main section#products #products-title .container ul li:last-child {
+main #main-breadcrumb .container ul li:hover, main #main-breadcrumb .container ul li:last-child {
   color: #fff;
 }
-main section#products #products-title .container ul li a {
+main #main-breadcrumb .container ul li a {
   color: inherit;
   transition: color 0.3s ease;
 }
-main section#products #products-title .container ul span {
+main #main-breadcrumb .container ul span {
   font-size: 1.2rem;
   font-weight: 500;
   color: #b6b6b6;
   margin: 0 0.5rem;
   line-height: 1.5;
+}
+main section#products {
+  padding: 7.6rem 0 12rem 0;
 }
 main section#products .container {
   display: flex;
@@ -776,7 +779,7 @@ main section#products .container {
 }
 main section#products .container #products-navigation {
   width: 100%;
-  padding: 6rem 0;
+  padding: 12rem 0 6rem 0;
 }
 main section#products .container #products-navigation ul {
   width: 100%;
@@ -889,6 +892,393 @@ main section#products .container #products-content .product .product-text a:hove
   background-color: #fff;
 }
 main section#products .container #products-content .product .product-text a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #b6b6b6;
+  position: absolute;
+  bottom: -0.15rem;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+main section#details {
+  padding: 7.6rem 0 12rem 0;
+}
+main section#details .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 12rem;
+}
+main section#details .container #details-image {
+  width: 70%;
+  height: 85rem;
+  padding-right: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main section#details .container #details-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: 0.15rem solid #212121;
+}
+main section#details .container #details-image #details-main-image {
+  width: calc(100% - 18rem);
+  height: 100%;
+}
+main section#details .container #details-image #details-sub-images {
+  width: 18rem;
+  margin-left: 0.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main section#details .container #details-image #details-sub-images img {
+  padding: 0.375rem 0;
+}
+main section#details .container #details-image #details-sub-images img:first-child {
+  padding-top: 0;
+}
+main section#details .container #details-image #details-sub-images img:last-child {
+  padding-bottom: 0;
+}
+main section#details .container #details-content {
+  width: 30%;
+  padding-left: 2.5rem;
+}
+main section#details .container #details-content h1 {
+  font-size: 4.2rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 4.8rem;
+  margin-bottom: 1rem;
+}
+main section#details .container #details-content #details-price {
+  margin-bottom: 1rem;
+}
+main section#details .container #details-content #details-price p {
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #fff;
+}
+main section#details .container #details-content #details-text {
+  margin-bottom: 2rem;
+}
+main section#details .container #details-content #details-text p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 1.75;
+}
+main section#details .container #details-content #details-categories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+main section#details .container #details-content #details-categories h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 1.5rem;
+  line-height: 1;
+}
+main section#details .container #details-content #details-categories ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main section#details .container #details-content #details-categories ul li {
+  margin-right: 1rem;
+}
+main section#details .container #details-content #details-categories ul li a {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #b6b6b6;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+main section#details .container #details-content #details-categories ul li a:hover {
+  color: #fff;
+}
+main section#details .container #details-content #details-categories ul li:last-child {
+  margin-right: 0;
+}
+main section#details .container #details-content #details-tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main section#details .container #details-content #details-tags h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 1.5rem;
+  line-height: 1;
+}
+main section#details .container #details-content #details-tags ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main section#details .container #details-content #details-tags ul li {
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #000;
+  padding: 0.35rem 1.25rem;
+  border-radius: 3rem;
+  background-color: #fff;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+main section#details .container #details-content #details-tags ul li:last-child {
+  margin-right: 0;
+}
+main section#details .container #details-collapse {
+  width: 100%;
+  padding-top: 12rem;
+}
+main section#details .container #details-collapse #collapse-title {
+  margin-bottom: 3rem;
+}
+main section#details .container #details-collapse #collapse-title ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main section#details .container #details-collapse #collapse-title ul li {
+  cursor: pointer;
+  position: relative;
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+  margin-right: 3.5rem;
+}
+main section#details .container #details-collapse #collapse-title ul li:hover::after, main section#details .container #details-collapse #collapse-title ul li.active::after {
+  width: 100%;
+}
+main section#details .container #details-collapse #collapse-title ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.15rem;
+  background-color: #fff;
+  transition: width 0.5s ease;
+}
+main section#details .container #details-collapse #collapse-title ul li:last-child {
+  margin-right: 0;
+}
+main section#details .container #details-collapse #collapse-content ul li {
+  width: 100%;
+  display: none;
+}
+main section#details .container #details-collapse #collapse-content ul li.active {
+  display: block;
+}
+main section#details .container #details-collapse #collapse-content ul li#description p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 1.75;
+}
+main section#details .container #details-collapse #collapse-content ul li#additional table {
+  width: 100%;
+}
+main section#details .container #details-collapse #collapse-content ul li#additional table tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid #282828;
+}
+main section#details .container #details-collapse #collapse-content ul li#additional table tr th {
+  width: 50%;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#additional table tr td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  padding: 0.7rem 1rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #b6b6b6;
+  line-height: 2.3rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review {
+  width: calc(50% - 1.5rem);
+  margin: 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-image {
+  width: 12rem;
+  height: 12rem;
+  margin-right: 2.5rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border: 0.2rem solid #212121;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content {
+  padding-top: 1rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content .review-stars {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content .review-stars svg {
+  width: 1.6rem;
+  height: auto;
+  margin-right: 0.4rem;
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 30;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content .review-stars svg:last-child {
+  margin-right: 0;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content .review-text h5 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content .review-text h5 span {
+  padding: 0 1rem;
+  border: 0.15rem solid #818181;
+  border-radius: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 1.5rem;
+}
+main section#details .container #details-related {
+  width: 100%;
+  padding-top: 6rem;
+}
+main section#details .container #details-related h2 {
+  width: 100%;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.75;
+  margin-bottom: 3rem;
+}
+main section#details .container #details-related #related-content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main section#details .container #details-related #related-content .product {
+  position: relative;
+  width: calc(25% - 1.5rem);
+  margin: 0 0.75rem;
+  border: 0.15rem solid #212121;
+  height: 40rem;
+  overflow: hidden;
+  display: flex;
+  padding: 3rem 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+main section#details .container #details-related #related-content .product:hover img {
+  transform: scale(1.05);
+}
+main section#details .container #details-related #related-content .product:hover .product-overlay {
+  opacity: 0.6;
+}
+main section#details .container #details-related #related-content .product img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+main section#details .container #details-related #related-content .product .product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%);
+  transition: opacity 0.75s ease;
+}
+main section#details .container #details-related #related-content .product .product-text {
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+main section#details .container #details-related #related-content .product .product-text h6 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.75;
+}
+main section#details .container #details-related #related-content .product .product-text a {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #b6b6b6;
+  transition: color 0.3s ease;
+}
+main section#details .container #details-related #related-content .product .product-text a:hover {
+  color: #fff;
+}
+main section#details .container #details-related #related-content .product .product-text a:hover::after {
+  background-color: #fff;
+}
+main section#details .container #details-related #related-content .product .product-text a::after {
   content: "";
   display: block;
   width: 100%;
@@ -1131,6 +1521,25 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   main section#products .container #products-content .product {
     width: calc(33.333% - 1.5rem);
   }
+  main section#details .container #details-image {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 12rem;
+  }
+  main section#details .container #details-content {
+    width: 100%;
+    padding-left: 0;
+  }
+  main section#details .container #details-content #details-text p {
+    max-width: 50rem;
+  }
+  main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review {
+    width: 100%;
+  }
+  main section#details .container #details-related #related-content .product {
+    width: calc(33.333% - 1.5rem);
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 974px) {
   html {
@@ -1188,6 +1597,10 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   }
   main section#products .container #products-content .product {
     width: calc(50% - 1.5rem);
+  }
+  main section#details .container #details-related #related-content .product {
+    width: calc(50% - 1.5rem);
+    margin-bottom: 2rem;
   }
   main section#coming-soon .container #coming-soon-timelapse .timelapse {
     width: 20%;
@@ -1375,6 +1788,49 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   main section#products .container #products-content .product {
     width: 100%;
     margin-bottom: 2rem;
+  }
+  main section#details .container #details-image {
+    height: initial;
+    flex-direction: column;
+  }
+  main section#details .container #details-image #details-main-image {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+  main section#details .container #details-image #details-main-image img {
+    height: 45rem;
+  }
+  main section#details .container #details-image #details-sub-images {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0;
+  }
+  main section#details .container #details-image #details-sub-images img {
+    width: calc(33.33% - 0.5rem);
+    height: 12.5rem;
+    padding: 0;
+  }
+  main section#details .container #details-collapse #collapse-title ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main section#details .container #details-collapse #collapse-title ul li {
+    margin-bottom: 0.75rem;
+  }
+  main section#details .container #details-collapse #collapse-title ul li:last-child {
+    margin-bottom: 0;
+  }
+  main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review {
+    flex-direction: column;
+  }
+  main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-image {
+    margin-bottom: 1rem;
+  }
+  main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content .review .review-content {
+    width: 100%;
+  }
+  main section#details .container #details-related #related-content .product {
+    width: 100%;
   }
   main section#coming-soon #coming-soon-background {
     height: 80vh;
