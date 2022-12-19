@@ -358,7 +358,6 @@ main section#explore .container #explore-image {
 main section#explore .container #explore-image img {
   width: calc(50% - 1.5rem);
   max-width: 32rem;
-  border: 0.15rem solid #212121;
 }
 main section#explore .container #explore-image img:last-child {
   margin-left: 3rem;
@@ -518,12 +517,6 @@ main section#contact .container #contact-content ul li {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-}
-main section#contact .container #contact-content ul li:nth-child(3) {
-  width: 100%;
-  padding: 0 40%;
-  order: 4;
-  margin-top: 4rem;
 }
 main section#contact .container #contact-content ul li h6 {
   font-size: 2.2rem;
@@ -793,18 +786,18 @@ main section#products .container #products-navigation ul li {
 main section#products .container #products-navigation ul li:hover a {
   color: #fff;
 }
+main section#products .container #products-navigation ul li.active a {
+  color: #fff;
+}
+main section#products .container #products-navigation ul li.active a::after {
+  width: 100%;
+}
 main section#products .container #products-navigation ul li a {
   position: relative;
   font-size: 1.8rem;
   font-weight: 400;
   color: #b6b6b6;
   transition: color 0.3s ease;
-}
-main section#products .container #products-navigation ul li a.active {
-  color: #fff;
-}
-main section#products .container #products-navigation ul li a.active::after {
-  width: 100%;
 }
 main section#products .container #products-navigation ul li a::after {
   content: "";
@@ -816,14 +809,17 @@ main section#products .container #products-navigation ul li a::after {
   bottom: -0.4rem;
   left: 50%;
   transform: translateX(-50%);
-  transition: background-color 0.3s ease;
+  transition: width 0.3s ease;
 }
 main section#products .container #products-content {
   width: 100%;
+}
+main section#products .container #products-content .products-category {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  display: none;
 }
 main section#products .container #products-content .product {
   position: relative;
@@ -873,10 +869,10 @@ main section#products .container #products-content .product .product-text {
   z-index: 5;
 }
 main section#products .container #products-content .product .product-text h6 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
   color: #fff;
-  line-height: 1.75;
+  margin-bottom: 1.25rem;
 }
 main section#products .container #products-content .product .product-text a {
   position: relative;
@@ -927,7 +923,11 @@ main section#details .container #details-image img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border: 0.15rem solid #212121;
+  border: 0.25rem solid #212121;
+  transition: border-color 0.5s ease;
+}
+main section#details .container #details-image img:hover {
+  border-color: #fff;
 }
 main section#details .container #details-image #details-main-image {
   width: calc(100% - 18rem);
@@ -943,13 +943,13 @@ main section#details .container #details-image #details-sub-images {
   align-items: flex-start;
 }
 main section#details .container #details-image #details-sub-images img {
-  padding: 0.375rem 0;
+  margin: 0.375rem 0;
 }
 main section#details .container #details-image #details-sub-images img:first-child {
-  padding-top: 0;
+  margin-top: 0;
 }
 main section#details .container #details-image #details-sub-images img:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 main section#details .container #details-content {
   width: 30%;
@@ -961,14 +961,6 @@ main section#details .container #details-content h1 {
   color: #fff;
   line-height: 4.8rem;
   margin-bottom: 1rem;
-}
-main section#details .container #details-content #details-price {
-  margin-bottom: 1rem;
-}
-main section#details .container #details-content #details-price p {
-  font-size: 2.7rem;
-  font-weight: 400;
-  color: #fff;
 }
 main section#details .container #details-content #details-text {
   margin-bottom: 2rem;
@@ -983,7 +975,7 @@ main section#details .container #details-content #details-categories {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 main section#details .container #details-content #details-categories h3 {
   font-size: 2.2rem;
@@ -1111,17 +1103,22 @@ main section#details .container #details-collapse #collapse-content ul li#additi
 }
 main section#details .container #details-collapse #collapse-content ul li#additional table tr th {
   width: 50%;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #fff;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 1.25rem;
 }
 main section#details .container #details-collapse #collapse-content ul li#additional table tr td {
+  cursor: default;
   width: 50%;
   font-size: 1.6rem;
   font-weight: 400;
   color: #b6b6b6;
   padding: 0.7rem 1rem;
+  transition: color 0.3s ease;
+}
+main section#details .container #details-collapse #collapse-content ul li#additional table tr td:hover {
+  color: #fff;
 }
 main section#details .container #details-collapse #collapse-content ul li#reviews #reviews-content {
   width: 100%;
@@ -1260,7 +1257,7 @@ main section#details .container #details-related #related-content .product .prod
   z-index: 5;
 }
 main section#details .container #details-related #related-content .product .product-text h6 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 400;
   color: #fff;
   line-height: 1.75;
@@ -1627,6 +1624,10 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   footer .container #footer-address ul, footer .container #footer-overview ul, footer .container #footer-social ul {
     align-items: center;
   }
+  footer .container #footer-address ul li, footer .container #footer-overview ul li, footer .container #footer-social ul li {
+    width: 75%;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 718px) {
   html {
@@ -1731,7 +1732,7 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   main section#explore .container #explore-image img {
     width: 100%;
     max-width: initial;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
   main section#explore .container #explore-image img:last-child {
     margin-left: 0;
@@ -1808,7 +1809,10 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   main section#details .container #details-image #details-sub-images img {
     width: calc(33.33% - 0.5rem);
     height: 12.5rem;
-    padding: 0;
+    margin: 0;
+  }
+  main section#details .container #details-content #details-text p {
+    text-align: justify;
   }
   main section#details .container #details-collapse #collapse-title ul {
     flex-direction: column;

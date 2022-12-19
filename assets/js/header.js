@@ -11,7 +11,7 @@ $(window).scroll(function(){
       $("#header-menu").slideUp(750);
     }
 
-    if($("body").hasClass("index")){
+    if($("body").attr("page") == "index"){
       if($(this).scrollTop() == 0){
         $("header").removeClass("scroll");
       }
@@ -25,3 +25,13 @@ $("#header-mobile i").click(function(){
     $("#header-menu").slideToggle();
     $("header").addClass("scroll");
 });
+
+
+if($("html").attr("lang") == "tr-TR"){
+  $("#header-language span").html("TR");
+  $("#language-change").html("EN");
+  $("#language-change").attr("href","../en/" + $("body").attr("page") + ".html");
+}
+else{
+  $("#language-change").attr("href","../tr/" + $("body").attr("page") + ".html");
+}
