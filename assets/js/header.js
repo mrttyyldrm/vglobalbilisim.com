@@ -19,6 +19,13 @@ $(window).scroll(function(){
         $("header").addClass("scroll");
       }
     }
+
+    if($(this).scrollTop() > $(window).height()){
+      $("a#header-top").addClass("active");
+    }
+    else{
+      $("a#header-top").removeClass("active");
+    }
 });
 
 $("#header-mobile i").click(function(){

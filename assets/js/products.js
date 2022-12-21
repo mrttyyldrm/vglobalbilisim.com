@@ -4,6 +4,6 @@ $("#products-navigation ul li").click(function(){
         $("#products-content #" + $(this).attr("product")).css("display","flex");
         $("#products-navigation ul li").removeClass("active");
         $(this).addClass("active");
-        $("#main-breadcrumb .container ul li:last").html($(this).attr("product"));
+        $("#main-breadcrumb .container ul li:last").html($(this).attr("product").replace("-"," "));
     }
 });

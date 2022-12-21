@@ -52,6 +52,38 @@ header.scroll {
   background-color: #000;
   border-color: #212121;
 }
+header a#header-top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.25rem solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  opacity: 0;
+  transition-property: background-color, opacity;
+  transition: 0.3s ease;
+}
+header a#header-top:hover {
+  background-color: transparent;
+}
+header a#header-top:hover i {
+  color: #fff;
+}
+header a#header-top.active {
+  z-index: 300;
+  opacity: 1;
+}
+header a#header-top i {
+  font-size: 1.7rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
 header .container {
   display: flex;
   justify-content: space-between;
@@ -901,6 +933,42 @@ main section#products .container #products-content .product .product-text a::aft
 main section#details {
   padding: 7.6rem 0 12rem 0;
 }
+main section#details #details-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 200;
+  display: none;
+}
+main section#details #details-popup #popup-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+main section#details #details-popup #popup-container i {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+main section#details #details-popup #popup-container img {
+  border: 0.25rem solid #fff;
+  width: 50rem;
+  height: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 main section#details .container {
   display: flex;
   justify-content: space-between;
@@ -917,6 +985,7 @@ main section#details .container #details-image {
   align-items: flex-start;
 }
 main section#details .container #details-image img {
+  cursor: pointer;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1260,7 +1329,7 @@ main section#details .container #details-related #related-content .product .prod
   font-size: 2.2rem;
   font-weight: 400;
   color: #fff;
-  line-height: 1.75;
+  margin-bottom: 1.25rem;
 }
 main section#details .container #details-related #related-content .product .product-text a {
   position: relative;
@@ -1594,6 +1663,13 @@ footer .container #footer-address ul li a, footer .container #footer-overview ul
   }
   main section#products .container #products-content .product {
     width: calc(50% - 1.5rem);
+  }
+  main section#details #details-popup #popup-container {
+    width: 35rem;
+  }
+  main section#details #details-popup #popup-container img {
+    width: 35rem;
+    height: 35rem;
   }
   main section#details .container #details-related #related-content .product {
     width: calc(50% - 1.5rem);

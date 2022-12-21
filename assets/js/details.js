@@ -9,3 +9,11 @@ $("#collapse-title ul li").click(function(){
         $(this).addClass("active");
     }
 });
+
+$("#details-image img").click(function(){
+    $("#popup-container img").attr("src",$(this).attr("src"));
+    $("#details-popup").fadeIn();
+});
+$("#popup-container i").click(function(){
+    $("#details-popup").fadeOut();
+});
